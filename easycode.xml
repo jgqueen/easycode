@@ -1,8 +1,19 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_repeat" id="1" inline="true" x="25" y="66">
-    <value name="TIMES">
-      <block type="math_number" id="2">
-        <field name="NUM">6</field>
+  <block type="controls_whileUntil" id="37" inline="false" x="56" y="105">
+    <field name="MODE">UNTIL</field>
+    <value name="NUMBER">
+      <block type="logic_compare" id="83" inline="true">
+        <field name="OP">GT</field>
+        <value name="A">
+          <block type="sensor_spectrometer" id="67">
+            <field name="LIGHT">GREEN</field>
+          </block>
+        </value>
+        <value name="B">
+          <block type="math_number" id="90">
+            <field name="NUM">80</field>
+          </block>
+        </value>
       </block>
     </value>
     <statement name="DO">
@@ -31,8 +42,5 @@
         </next>
       </block>
     </statement>
-    <next>
-      <block type="movement_stop" id="9"></block>
-    </next>
   </block>
 </xml>
